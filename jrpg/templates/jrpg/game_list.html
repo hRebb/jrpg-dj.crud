@@ -1,0 +1,29 @@
+{% block content %}
+    <!-- game_list.html -->
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Editeur</th>
+                <th>Console</th>
+                <th>Adaptation</th>
+                <th>Informations</th>
+                <th>Editer</th>
+                <th>Supprimer</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for game in games %}
+                <tr>
+                    <td>{{ game.name }}</td>
+                    <td>{{ game.publisher }}</td>
+                    <td>{{ game.console }}</td>
+                    <td>{{ game.adaptation }}</td>
+                    <td></td>
+                    <td><a href="{% url 'edit_game' game.id %}">Editer</a></td>
+                    <td><a href="{% url 'delete_game' game.id %}">Supprimer</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
