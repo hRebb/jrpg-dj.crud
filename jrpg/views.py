@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from models import Game
+from .models import Game
 
 # Create your views here.
 

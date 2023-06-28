@@ -21,5 +21,5 @@ from jrpg import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.game_list, name='game_list'),
-    path('/add', views.add_game, name='add_game')
+    path('add/', views.add_game, name='add_game')
 ]
