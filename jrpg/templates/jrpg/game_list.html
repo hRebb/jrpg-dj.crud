@@ -1,5 +1,12 @@
+{% load static %}
 {% block content %}
     <!-- game_list.html -->
+    <head>
+        <title>
+            jRPG's Django CRUD
+        </title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    </head>
     <table>
         <thead>
             <tr>
@@ -33,5 +40,11 @@
             {% endfor %}
         </tbody>
     </table>
+
+    <button>
+        <a href="{% url 'add_game' %}">
+            Add
+        </a>
+    </button>
 
 {% endblock %}
