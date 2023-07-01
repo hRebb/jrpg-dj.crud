@@ -7,14 +7,14 @@
         </title>
         <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
     </head>
-    <table>
+    <table class="table">
         <thead>
             <tr>
                 <th>Nom</th>
                 <th>Editeur</th>
                 <th>Console</th>
                 <th>Adaptation</th>
-                <th>Informations</th>
+                <!-- <th>Informations</th> -->
                 <th>Editer</th>
                 <th>Supprimer</th>
             </tr>
@@ -41,10 +41,12 @@
         </tbody>
     </table>
 
-    <button>
-        <a href="{% url 'add_game' %}">
-            Add
-        </a>
-    </button>
+    <div class="button-container">
+        <button class="button">
+            <a href="{% url 'add_game' %}">
+                Add
+            </a>
+        </button>
+    </div>
 
 {% endblock %}
