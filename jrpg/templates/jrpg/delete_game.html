@@ -1,0 +1,8 @@
+{% block content %}
+    <!-- delete_game.html -->
+    <p> You are about to delete "{{ game.name }}", are you sure ?</p>
+    <form method="post" action="{% url 'delete_game' game.id %}">
+        {% csrf_token %}
+        <input type="submit" value="Supprimer">
+    </form>
+{% endblock %}

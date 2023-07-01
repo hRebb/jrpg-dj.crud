@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Game
 
 # Create your views here.
@@ -28,8 +28,43 @@ def add_game(request):
             adaptation=adaptation
         )
         game.save()
-        return redirect('jrpg/game_list.html')
+        return redirect('game_list')
     return render(
         request,
         'jrpg/add_game.html'
+    )
+
+
+def edit_game(request, game_id):
+    game = get_object_or_404(Game, pk=game_id)
+
+    if request.method == 'POST':
+        game.name = request.POST['name']
+        game.publisher = request.POST['publisher']
+        game.console = request.POST['console']
+        game.adaptation = request.POST['adaptation']
+        game.save()
+        return redirect('game_list')
+
+    return render(
+        request,
+        'jrpg/edit_game.html',
+        {
+            'game': game
+        }
+    )
+
+def delete_game(request, game_id):
+    game = get_object_or_404(Game, pk=game_id)
+
+    if request.method == 'POST':
+        game.delete()
+        return redirect('game_list')
+
+    return render(
+        request,
+        'jrpg/delete_game.html',
+        {
+            'game': game
+        }
     )
