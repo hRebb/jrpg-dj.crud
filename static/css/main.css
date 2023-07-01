@@ -2,16 +2,24 @@
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
+  background-color: #ee5274;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #00284f;
 }
 .table th, .table td {
+  text-align: left;
   padding: 10px;
   border: 1px solid #ccc;
 }
 .table th {
   background-color: #f2f2f2;
+  color: #ea4e4e;
 }
 .table tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: #f2f2f2;
+}
+.table tr:hover {
+  background-color: #cbb690;
 }
 
 .button {
@@ -32,6 +40,13 @@
 
 .button-container {
   text-align: center;
+}
+
+.btn-add {
+  color: #ffffff;
+}
+.btn-add:hover {
+  background-color: #0056b3;
 }
 
 .form-container {
@@ -81,6 +96,10 @@
 }
 .submit-button:hover {
   background-color: #0056b3;
+}
+
+html {
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgb(100, 43, 115) 0%, rgb(4, 0, 4) 90%);
 }
 
 /*# sourceMappingURL=main.css.map */

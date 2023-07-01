@@ -27,12 +27,12 @@
                     <td>{{ game.console }}</td>
                     <td>{{ game.adaptation }}</td>
                     <td>
-                        <a href="{% url 'edit_game' game.id %}">
+                        <a class="button btn-add" href="{% url 'edit_game' game.id %}">
                             Edit
                         </a>
                     </td>
                     <td>
-                        <a href="{% url 'delete_game' game.id %}">
+                        <a class="button btn-add" href="{% url 'delete_game' game.id %}">
                             Delete
                         </a>
                     </td>
@@ -42,11 +42,9 @@
     </table>
 
     <div class="button-container">
-        <button class="button">
-            <a href="{% url 'add_game' %}">
-                Add
-            </a>
-        </button>
+        <a class="button btn-add" href="{% url 'add_game' %}">
+            Add
+        </a>
     </div>
 
 {% endblock %}

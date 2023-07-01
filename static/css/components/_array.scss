@@ -2,17 +2,26 @@
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
+  background-color: #ee5274;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  color: #00284f;
 
   th, td {
+    text-align: left;
     padding: 10px;
     border: 1px solid #ccc;
   }
 
   th {
     background-color: #f2f2f2;
+    color: #ea4e4e;
   }
 
   tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #cbb690;
   }
 }
